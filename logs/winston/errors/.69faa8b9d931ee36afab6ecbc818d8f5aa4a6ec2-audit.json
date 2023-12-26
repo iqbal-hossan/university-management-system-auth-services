@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Iqbal\\Apollo-level-2\\university-manangement-sysytem\\university-management-system-auth-service\\logs\\winston\\errors\\.69faa8b9d931ee36afab6ecbc818d8f5aa4a6ec2-audit.json",
+    "files": [
+        {
+            "date": 1703584106165,
+            "name": "D:\\Iqbal\\Apollo-level-2\\university-manangement-sysytem\\university-management-system-auth-service\\logs\\winston\\errors\\phu-2023-12-26-09-error.log",
+            "hash": "92726c5db6d105d338a9d2c09f993ceaae99eee3549e89df46b065ee62e885fb"
+        }
+    ],
+    "hashType": "sha256"
+}
