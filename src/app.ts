@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api/v1/users/', UserRoutes)
 // Testing
 app.get('/', (req: Request, res: Response) => {
-  // res.send('Working Successfully!');
+  res.send('Working Successfully!');
 //   Promise.reject(new Error('Unhandled Promise Rejection'))
   // console.log(x)
 })
