@@ -3,7 +3,8 @@ import { IGenericErrorMessage } from "../interfaces/error";
 import { TGenericErrorResponse } from "../interfaces/common";
 
 const handleValidationError = (error: mongoose.Error.ValidationError): TGenericErrorResponse => {
-    const errors: IGenericErrorMessage[] = Object.values(error.errors).map((el: mongoose.Error.ValidationError | mongoose.Error.CastError) => {
+    // : mongoose.Error.ValidationError | mongoose.Error.CastError
+    const errors: IGenericErrorMessage[] = Object.values(error.errors).map((el) => {
         return {
             path: el?.path,
             message: el?.message

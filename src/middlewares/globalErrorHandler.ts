@@ -51,13 +51,13 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     //     res.status(500).json({error: "Something went wrong!"})
     // }
 
-    // res.status(statusCode).json({
-    //     success: false,
-    //     message,
-    //     errorMessage,
-    //     stack: config.env !== 'production' ? error.stack : undefined,
+    res.status(statusCode).json({
+        success: false,
+        message,
+        errorMessages,
+        stack: config.env !== 'production' ? error.stack : undefined,
 
-    // });
+    });
 }
 
 export default globalErrorHandler;
