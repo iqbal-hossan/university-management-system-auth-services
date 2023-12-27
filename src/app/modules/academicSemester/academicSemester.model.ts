@@ -1,8 +1,8 @@
-import { Model, Schema, model } from 'mongoose'
+import { Schema, model } from 'mongoose'
 import { TAcademicSemester, AcademicSemesterModel } from './academicSemester.interface'
 import {academicSemesterCodes, academicSemesterMonths, academicSemesterTtiles,  } from './academicSemester.constant';
 import ApiError from '../../../errors/ApiError';
-import status from 'http-status';
+import httpStatus from 'http-status';
 
 
 const academicSemesterSchema = new Schema<TAcademicSemester>(
@@ -25,7 +25,7 @@ academicSemesterSchema.pre('save', async function (next) {
     year: this.year,
   })
   if(isExist){
-    throw new ApiError(status.CONFLICT, 'Academic semester is already exist!');
+    throw new ApiError(httpStatus.CONFLICT, 'Academic semester is already exist!');
   }
   next();
 })
