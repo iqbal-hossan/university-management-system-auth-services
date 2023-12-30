@@ -14,7 +14,7 @@ const sendResponse =<T>(res: Response,data:TApiResponse<T>):void =>{
         message: data.message || null,
         data: data.data || null
     }
-    res.status(data.statusCode).json()
+    res.status(data.statusCode).json(responseData)
 
 }
 
